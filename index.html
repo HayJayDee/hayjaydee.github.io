@@ -17,60 +17,19 @@
     <script>
         $(document).ready(function(){
             if(location.host == "localhost"){
-                $("a").each(function(){
-                    $(this).attr("href", "/hayjaydee.github.io" + $(this).attr("href"));
+                $("#navbar-included").load("/hayjaydee.github.io/navbar.html", function(){
+                    $("#navbar-included a").each(function(){
+                        $(this).attr("href", "/hayjaydee.github.io" + $(this).attr("href"));
+                    });
                 });
+                
+            }else {
+                $("#navbar-included").load("/navbar.html"); 
             }
         });
-        
     </script>
 </head>
 <body>
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="/index.html">HayJayDee</a>
-            </div>
-            <ul class="nav navbar-nav">
-                <li class="dropdown">
-                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Programming<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="/programming/JannisOS.html">JannisOS</a></li>
-                        <li><a href="/programming/easyhamlog.html">EasyHamLog</a></li>
-                    </ul>
-                </li>
-
-                <li class="dropdown">
-                    <a data-toggle="dropdown" class="dropdown-toggle">Electronics<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="/electronics/ham-radio-interface.html">Ham-Radio Interface</a></li>
-                    </ul>
-                </li>
-
-                <li class="dropdown">
-                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Amateur Radio<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="/amateur-radio/do9jj.html">DO9JJ</a></li>
-                        <li><a href="/amateur-radio/iss-contact.html">ISS School Contact</a></li>
-                        <li><a href="/amateur-radio/antarctica.html">Antarctica School Contact</a></li>
-                        <li><a href="/amateur-radio/dk0lg.html">School Station DK0LG</a></li>
-                        <li><a href="/amateur-radio/weather-sat.html">Weather Satelites</a></li>
-                    </ul>
-                </li>
-
-                <li class="dropdown">
-                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Astronomy<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="/astronomy/radio-astronomy.html">Radio Astronomy</a></li>
-                    </ul>
-                </li>
-            </ul>
-
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="/about.html">About me</a></li>
-            </ul>
-        </div>
-    </nav>
-
+    <div id="navbar-included"></div>
 </body>
 </html>
