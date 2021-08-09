@@ -42,22 +42,8 @@
 
     <script>
         $(document).ready(function(){
-            if(location.host == "localhost"){
-                $("#navbar-included").load("/hayjaydee.github.io/navbar.html", function(){
-                    $("#navbar-included a").each(function(){
-                        $(this).attr("href", "/hayjaydee.github.io" + $(this).attr("href"));
-                    });
-                });
-
-                $("#footer-included").load("/hayjaydee.github.io/footer.html", function(){
-                    $("#footer-included a").each(function(){
-                        $(this).attr("href", "/hayjaydee.github.io" + $(this).attr("href"));
-                    });
-                });
-            }else {
-                $("#navbar-included").load("/navbar.html");
-                $("#footer-included").load("/footer.html");
-            }
+            $("#navbar-included").load("/navbar.html");
+            $("#footer-included").load("/footer.html");
         });
     </script>
 </head>
@@ -74,33 +60,33 @@
             <li data-target="#showcase-carousel" data-slide-to="3"></li>
         </ul>
         <div class="carousel-inner">
-            <a href="/hayjaydee.github.io/electronics/ham-radio-interface.html" class="carousel-item active">
-                <img src="/hayjaydee.github.io/img/electronics.jpg" class="d-block mx-auto" alt="c1" width="1024" height="800">
+            <a href="/electronics/ham-radio-interface.html" class="carousel-item active">
+                <img src="/img/electronics.jpg" class="d-block mx-auto" alt="c1" width="1024" height="800">
                 <div class="carousel-caption d-none d-md-block text-dark">
                     <h3>Electronics</h3>
                     <p>Controlling the flow of electrons...</p>
                 </div>
             </a>
             
-            <a href="/hayjaydee.github.io/programming/JannisOS.html" class="carousel-item">
-                <img src="/hayjaydee.github.io/img/programming.png" class="d-block mx-auto" alt="c2" width="1024" height="800">
+            <a href="/programming/JannisOS.html" class="carousel-item">
+                <img src="/img/programming.png" class="d-block mx-auto" alt="c2" width="1024" height="800">
                 <div class="carousel-caption d-none d-md-block text-light">
                     <h3>Programming</h3>
                     <p>How do you tell your computer what he has to do?</p>
                 </div>
             </a>
 
-            <a href="/hayjaydee.github.io/astronomy/radio-astronomy.html" class="carousel-item">
+            <a href="/astronomy/radio-astronomy.html" class="carousel-item">
                 
-                <img src="/hayjaydee.github.io/img/amateurradio.jpg" class="d-block mx-auto" alt="c3" width="1024" height="800">
+                <img src="/img/amateurradio.jpg" class="d-block mx-auto" alt="c3" width="1024" height="800">
                 <div class="carousel-caption d-none d-md-block text-left text-light">
                     <h3>Amateur Radio</h3>
                     <p>Communicate around the world with a piece of wire</p>
                 </div>
             </a>
 
-            <a href="/hayjaydee.github.io/astronomy/radio-astronomy.html" class="carousel-item">
-                <img src="/hayjaydee.github.io/img/electronics2.png" class="d-block mx-auto" alt="c4" width="1024" height="800">
+            <a href="/astronomy/radio-astronomy.html" class="carousel-item">
+                <img src="/img/electronics2.png" class="d-block mx-auto" alt="c4" width="1024" height="800">
                 <div class="carousel-caption d-none d-md-block text-dark">
                     <h3>Radio Astronomy</h3>
                     <p>The complex, but fascinating hobby of looking at stars with radio waves</p>

@@ -16,22 +16,8 @@
 
     <script>
         $(document).ready(function(){
-            if(location.host == "localhost"){
-                $("#navbar-included").load("/hayjaydee.github.io/navbar.html", function(){
-                    $("#navbar-included a").each(function(){
-                        $(this).attr("href", "/hayjaydee.github.io" + $(this).attr("href"));
-                    });
-                });
-
-                $("#footer-included").load("/hayjaydee.github.io/footer.html", function(){
-                    $("#footer-included a").each(function(){
-                        $(this).attr("href", "/hayjaydee.github.io" + $(this).attr("href"));
-                    });
-                });
-            }else {
-                $("#navbar-included").load("/navbar.html");
-                $("#footer-included").load("/footer.html");
-            }
+            $("#navbar-included").load("/navbar.html");
+            $("#footer-included").load("/footer.html");
         });
     </script>
 </head>
