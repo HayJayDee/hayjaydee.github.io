@@ -12,6 +12,32 @@
         .dropdown:hover .dropdown-menu {
             display: block;
         }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+          background-image: none;
+        }
+
+        .carousel-control-next-icon:after
+        {
+          content: '>';
+          font-size: 55px;
+          color: black;
+        }
+
+        .carousel-control-prev-icon:after {
+          content: '<';
+          font-size: 55px;
+          color: black;
+        }
+
+        .carousel-indicators li {
+            background-color: black;
+        } 
+
+        .carousel-indicators .active {
+            background-color: gray;
+        } 
     </style>
 
     <script>
@@ -39,7 +65,53 @@
     <div id="navbar-included"></div>
     
     <!-- Content here -->
+    
+    <div id="showcase-carousel" class="carousel slide bg-primary" data-ride="carousel" data-interval="4000">
+        <ul class="carousel-indicators">
+            <li data-target="#showcase-carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#showcase-carousel" data-slide-to="1"></li>
+            <li data-target="#showcase-carousel" data-slide-to="2"></li>
+            <li data-target="#showcase-carousel" data-slide-to="3"></li>
+        </ul>
+        <div class="carousel-inner">
+            <a href="/hayjaydee.github.io/electronics/ham-radio-interface.html" class="carousel-item active">
+                <img src="/hayjaydee.github.io/img/electronics.jpg" class="d-block mx-auto" alt="c1" width="1024" height="800">
+                <div class="carousel-caption d-none d-md-block text-dark">
+                    <h3>Electronics</h3>
+                    <p>Controlling the flow of electrons...</p>
+                </div>
+            </a>
+            
+            <a href="/hayjaydee.github.io/programming/JannisOS.html" class="carousel-item">
+                <img src="/hayjaydee.github.io/img/programming.png" class="d-block mx-auto" alt="c2" width="1024" height="800">
+                <div class="carousel-caption d-none d-md-block text-light">
+                    <h3>Programming</h3>
+                    <p>How do you tell your computer what he has to do?</p>
+                </div>
+            </a>
 
+            <a href="/hayjaydee.github.io/astronomy/radio-astronomy.html" class="carousel-item">
+                
+                <img src="/hayjaydee.github.io/img/amateurradio.jpg" class="d-block mx-auto" alt="c3" width="1024" height="800">
+                <div class="carousel-caption d-none d-md-block text-left text-light">
+                    <h3>Amateur Radio</h3>
+                    <p>Communicate around the world with a piece of wire</p>
+                </div>
+            </a>
+
+            <a href="/hayjaydee.github.io/astronomy/radio-astronomy.html" class="carousel-item">
+                <img src="/hayjaydee.github.io/img/electronics2.png" class="d-block mx-auto" alt="c4" width="1024" height="800">
+                <div class="carousel-caption d-none d-md-block text-dark">
+                    <h3>Radio Astronomy</h3>
+                    <p>The complex, but fascinating hobby of looking at stars with radio waves</p>
+                </div>
+            </a>
+        </div>
+
+        <a href="#showcase-carousel" data-slide="prev" class="carousel-control-prev"><span class="carousel-control-prev-icon"></span></a>
+        <a href="#showcase-carousel" data-slide="next" class="carousel-control-next"><span class="carousel-control-next-icon"></span></a>
+    </div>
+    
     <div id="footer-included"></div>
 </body>
 </html>
